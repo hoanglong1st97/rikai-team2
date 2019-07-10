@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  host: localhost
+  username: root
+  password:
+  socket: /opt/lampp/var/mysql/mysql.sock
+
+development:
+  <<: *default
+  database: InternRikai
+
+
+production:
+  <<: *default
+  database: InternRikai
+  username: root
+  password:
